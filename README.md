@@ -72,3 +72,18 @@ cargo run --bin exercise2_2
 
 参考：https://zenn.dev/kazu8/articles/82a0140e054f8d
 
+## Cargoの使い方
+- 新しくプロジェクトを作る場合は`cargo new {PROJECT_NAME}`
+  - ただし、デフォルトだと.gitなどが生成されてしまうので、必要ない場合は下記を実行
+    - `cargo new {PROJECT_NAME} --vcs none`
+- パッケージを追加したい場合は`cargo add {PACKAGE_NAME}`
+- テストを実行したい時は`cargo test`
+- ビルドは`cargo build`
+
+その他のコマンドは[こちら](https://www.markcreators.com/blog/%E9%96%8B%E7%99%BA/cargo%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%B5%E3%83%96%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7/)を参照
+
+### その他
+#### Rustをjupyterで動かしたい人向け
+https://zenn.dev/esaka/scraps/e9baa5851f6109
+
+#### 機械学習をRustでやってみたい方へ
