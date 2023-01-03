@@ -10,7 +10,7 @@ fn transpose(matrix: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
     t
 }
 
-// &をつけないと借用してないのでmatrixは移動したことになり、
+// &をつけないと借用してないのでmatrixの所有権は移動したことになり、
 // transposeでmatrixが引数として使えなくなってしまう
 fn pretty_print(matrix: &Vec<Vec<i32>>) {
     for row in matrix {

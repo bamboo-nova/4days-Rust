@@ -57,12 +57,14 @@ fn main() {
     println!("x: {x}");
 
     // Dangling References(解放)
+    // 詳細: https://zenn.dev/ucwork/articles/6de5c9c2257f2d
     // この一行は「maybe it is overwritten before being read?」という警告が出てくる
     // 一度も使わない変数どころか、一度も使わない値(ここでは20)に対してもwarningを出してくるので愛が重い
     let mut ref_x: i32 = 20;
     {
         let x: i32 = 10;
         ref_x = x;
+        // lifetimeの短い参照したxを入れるとエラーになる。
         // ref_x = &xはできない(参照は値を借りるだけであり、&xそのものを渡してxを解放はできないので注意)
     }
     println!("ref_x: {ref_x}");
