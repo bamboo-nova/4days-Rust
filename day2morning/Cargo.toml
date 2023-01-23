@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+num = "0.4.0"
 rand = "0.8.5"
 
 [[bin]]
@@ -15,3 +16,15 @@ path = "src/main.rs"
 [[bin]]
 name = "example_method"
 path = "src/example_method.rs"
+
+[[bin]]
+name = "pattern_matching"
+path = "src/pattern.rs"
+
+[[bin]]
+name = "exercise_health_statistics"
+path = "src/exercise_health_statistics.rs"
+
+[[bin]]
+name = "exercise_polygon_struct"
+path = "src/exercise_polygon_struct.rs"
