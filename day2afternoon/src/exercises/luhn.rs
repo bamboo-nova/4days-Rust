@@ -1,5 +1,8 @@
 #![allow(unused_variables, dead_code)]
 
+use tracing::info;
+use tracing_subscriber;
+
 macro_rules! round {
     ($x:expr, $scale:expr) => (($x * $scale).round() / $scale)
 }
@@ -26,6 +29,8 @@ pub fn divide_digit_and_sum(n: usize) -> usize {
 }
 
 pub fn luhn(cc_number: &str) -> bool {
+    info!(cc_number, "input numbers for check digit");
+
     let remove_cc_number: String = cc_number.chars().filter(|c| !c.is_whitespace()).collect();
     let preprocessed_cc_number: &str = &remove_cc_number;
     // 数字以外が入ってきてるかどうかのチェック(u64にしないとパースできずErrになるので注意)
@@ -34,11 +39,13 @@ pub fn luhn(cc_number: &str) -> bool {
         Err(_) => false,
     };
     if !check_numbers_only {
+        info!("Input cc_number includes except for numbers.");
         return false;
     }
     let mut index: usize = 0;
     let mut output_vecter: Vec<usize> = Vec::new();
     if preprocessed_cc_number.len() < 2 {
+        info!("The length of cc_number is less than 2.");
         return false;
     }
     // 参考: rev()なら良いけどreverseは破壊してしまう。iter経由のrev()なら破壊しないので大丈夫
@@ -69,11 +76,11 @@ pub fn luhn(cc_number: &str) -> bool {
         index += 1;
     }
     let check_digit: usize = output_vecter.iter().sum();
-    println!("{:?}", output_vecter);
-    println!("{}", check_digit);
     if check_digit % 10 == 0 {
+        info!("cc_number is valid!");
         true
     } else {
+        info!("cc_number is not valid.");
         false
     }
 }
@@ -117,7 +124,13 @@ fn test_invalid_cc_number() {
 
 #[allow(dead_code)]
 fn main() {
-    println!("{}", luhn(" 0 0 "));
-    println!("{}", luhn("4263 9826 4026 9299"));
-    println!("{}", luhn("4223 9826 4026 9299"));
+    // install global collector configured based on RUST_LOG env var.
+    // tracingの初期化はmain関数で行うこと
+    // https://zenn.dev/belle/articles/900e490ae8dbfe
+    // https://blog.ymgyt.io/entry/how-tracing-and-tracing-subscriber-write-events/
+    tracing_subscriber::fmt::init();
+
+    luhn(" 0 0 ");
+    luhn("4263 9826 4026 9299");
+    luhn("4223 9826 4026 9299");
 }
