@@ -48,6 +48,7 @@ pub fn luhn(cc_number: &str) -> bool {
         info!("The length of cc_number is less than 2.");
         return false;
     }
+    // charsで一文字ずつ取得する
     // 参考: rev()なら良いけどreverseは破壊してしまう。iter経由のrev()なら破壊しないので大丈夫
     // https://zenn.dev/megeton/articles/fb6266bcb6aa1b
     // また、下記の書き方は非推奨(簡単な文字列でも0.1秒くらい遅くなってしまう)

@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+itertools = "0.10.5"
 tracing = "0.1"
 tracing-subscriber = "0.3"
 
@@ -80,3 +81,7 @@ path = "src/modules/visibility.rs"
 [[bin]]
 name = "luhn"
 path = "src/exercises/luhn.rs"
+
+[[bin]]
+name = "string_iter"
+path = "src/exercises/string_iter.rs"
