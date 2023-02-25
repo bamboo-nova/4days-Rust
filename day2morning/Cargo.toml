@@ -35,8 +35,8 @@ path = "src/pattern.rs"
 
 [[bin]]
 name = "exercise_health_statistics"
-path = "src/exercise_health_statistics.rs"
+path = "src/exercises/exercise_health_statistics.rs"
 
 [[bin]]
 name = "exercise_polygon_struct"
-path = "src/exercise_polygon_struct.rs"
+path = "src/exercises/exercise_polygon_struct.rs"
