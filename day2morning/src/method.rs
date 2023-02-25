@@ -7,6 +7,13 @@
 // mut &selfは特定の一度しか使わない値など、例えばリアルタイムの処理をする時に活用できる
 // また、新しい構造体を作成するときはnewメソッドを慣例的に用意する(pythonでいうなら__init__関数)
 // 上の場合はレシーバは用意しない
+
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: u8,
+}
+
 impl Person {
     fn say_hello(&self) {
         println!("Hello, my name is {}", self.name)
