@@ -1,0 +1,80 @@
+[package]
+name = "day2afternoon"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "block"
+path = "src/control_flow/block.rs"
+
+[[bin]]
+name = "if"
+path = "src/control_flow/if.rs"
+
+[[bin]]
+name = "while"
+path = "src/control_flow/while.rs"
+
+[[bin]]
+name = "for"
+path = "src/control_flow/for.rs"
+
+[[bin]]
+name = "loop"
+path = "src/control_flow/loop.rs"
+
+[[bin]]
+name = "match"
+path = "src/control_flow/match.rs"
+
+[[bin]]
+name = "break_and_continue"
+path = "src/control_flow/break_and_continue.rs"
+
+[[bin]]
+name = "option_and_result"
+path = "src/standard_library/option_and_result.rs"
+
+[[bin]]
+name = "string"
+path = "src/standard_library/string.rs"
+
+[[bin]]
+name = "vec"
+path = "src/standard_library/vec.rs"
+
+[[bin]]
+name = "hashmap"
+path = "src/standard_library/hashmap.rs"
+
+[[bin]]
+name = "box"
+path = "src/standard_library/box.rs"
+
+[[bin]]
+name = "box_recursive"
+path = "src/standard_library/box_recursive.rs"
+
+[[bin]]
+name = "rc"
+path = "src/standard_library/rc.rs"
+
+[[bin]]
+name = "weak_ptr"
+path = "src/standard_library/weak_ptr.rs"
+
+[[bin]]
+name = "modules"
+path = "src/modules/modules.rs"
+
+[[bin]]
+name = "visibility"
+path = "src/modules/visibility.rs"
+
+[[bin]]
+name = "luhn"
+path = "src/exercises/luhn.rs"
