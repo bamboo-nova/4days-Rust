@@ -10,3 +10,15 @@ edition = "2021"
 [[bin]]
 name = "traits"
 path = "src/Traits/traits.rs"
+
+[[bin]]
+name = "deriving"
+path = "src/Traits/deriving.rs"
+
+[[bin]]
+name = "default_methods"
+path = "src/Traits/default_methods.rs"
+
+[bin]]
+name = "iterator"
+path = "src/Traits/important_traits/iterator.rs"
