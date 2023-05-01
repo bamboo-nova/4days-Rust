@@ -58,3 +58,7 @@ path = "src/Traits/important_traits/overload.rs"
 [[bin]]
 name = "closures"
 path = "src/Traits/important_traits/closures.rs"
+
+[[bin]]
+name = "exercise"
+path = "src/exercises/gui.rs"
