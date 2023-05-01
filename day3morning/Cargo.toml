@@ -9,7 +9,7 @@ edition = "2021"
 
 [[bin]]
 name = "traits"
-path = "src/Traits/traits.rs"
+path = "src/Traits/base_traits.rs"
 
 [[bin]]
 name = "deriving"
@@ -19,6 +19,42 @@ path = "src/Traits/deriving.rs"
 name = "default_methods"
 path = "src/Traits/default_methods.rs"
 
-[bin]]
+[[bin]]
 name = "iterator"
 path = "src/Traits/important_traits/iterator.rs"
+
+[[bin]]
+name = "iterators"
+path = "src/Traits/important_traits/iterators.rs"
+
+[[bin]]
+name = "from_iterator"
+path = "src/Traits/important_traits/from_iterator.rs"
+
+[[bin]]
+name = "from_and_iterator"
+path = "src/Traits/important_traits/from_and_iterator.rs"
+
+[[bin]]
+name = "read"
+path = "src/Traits/important_traits/read.rs"
+
+[[bin]]
+name = "write"
+path = "src/Traits/important_traits/write.rs"
+
+[[bin]]
+name = "drop"
+path = "src/Traits/important_traits/drop.rs"
+
+[[bin]]
+name = "default"
+path = "src/Traits/important_traits/default.rs"
+
+[[bin]]
+name = "overload"
+path = "src/Traits/important_traits/overload.rs"
+
+[[bin]]
+name = "closures"
+path = "src/Traits/important_traits/closures.rs"
