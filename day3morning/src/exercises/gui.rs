@@ -1,5 +1,4 @@
 #[allow(unused_imports, unused_variables, dead_code)]
-
 pub trait Widget {
     /// Natural width of `self`.
     fn width(&self) -> usize;
@@ -27,6 +26,7 @@ impl Label {
     }
 }
 
+#[allow(dead_code)]
 pub struct Button {
     label: Label,
     callback: Box<dyn FnMut()>,
