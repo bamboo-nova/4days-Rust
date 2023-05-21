@@ -93,6 +93,7 @@ impl Widget for Button {
 
         writeln!(buffer, "+{:-<width$}+", "").unwrap();
         for line in label.lines() {
+            // ^widthで中央揃えになっている
             writeln!(buffer, "|{:^width$}|", &line).unwrap();
         }
         writeln!(buffer, "+{:-<width$}+", "").unwrap();
